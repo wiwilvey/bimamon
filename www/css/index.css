@@ -1,0 +1,52 @@
+html,body{
+    background-color: lightskyblue; color: navy;
+}
+.kepala{
+    text-align: center;
+    background-color: blue; color: white;
+    font-weight: bold; height: 150px;
+    padding: 25px; box-sizing: border-box;
+}
+div.row.kepala > div > h3{
+    font-size: 24px;
+}
+
+.badan {
+    min-height: calc(100% - 190px);
+    background-color: lightskyblue; color: navy;
+    font-size: 16px;
+}
+.blok-judul{
+    background-color: #1212b6; color: #ffff74;
+    margin: 20px 0px 10px 0px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.blok-judul > h2 { font-size: 22px;}
+.blok-judul > a { font-size: 32px;  color: white;}
+.kaki {
+    height: 40px; text-align: center; 
+    position: fixed; bottom: 0; font-size: 10px;
+    background-color: black; color: lightpink;
+    width: 100%; padding: 10px;
+}
+
+.blank-bottom { height: 45px;}
+
+.saldo {
+    text-align: right; padding-right: 20px; display: block;
+    background-color: lightgreen; width: 100%; 
+}
+
+.bina-form{
+    background-color:#1e1eff; color: #ffff74;
+    padding: 10px;
+}
+
+.login-image-trap {
+    width: 60px; margin:auto;
+}
+.login-image-trap > img {
+    width: 100%;
+}
