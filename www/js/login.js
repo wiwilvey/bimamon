@@ -4,6 +4,7 @@ $(document).ready(function(){
             uname: $('#username').val(),
             upass: $('#password').val()
         },function(resp){
+            console.log(resp);
             let data = JSON.parse(resp);
             let success, user , nig, nama, jabatan;
             success = data.sukses;
@@ -17,7 +18,10 @@ $(document).ready(function(){
                 localStorage.setItem('nig',nig);
                 localStorage.setItem('nama',nama);
                 localStorage.setItem('jabatan',jabatan);
-                window.location='index.html';
+                let wdir = {'ks':'indexks.html','wks':'indexks.html','wkl':'indexwk.html'};
+                
+                //alert (wdir[jabatan]);
+                window.location=wdir[jabatan];
             }
             
         })

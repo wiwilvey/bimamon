@@ -50,3 +50,10 @@ div.row.kepala > div > h3{
 .login-image-trap > img {
     width: 100%;
 }
+
+.bg-maroon {
+    background-color: maroon; color: aliceblue;
+}
+
+.dabay:nth-child(odd){ background-color: #f0f0f0;}
+.dabay > p { margin: 0; padding: 0;}

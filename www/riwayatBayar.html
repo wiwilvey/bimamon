@@ -30,8 +30,11 @@
     <meta http-equiv="Content-Security-Policy" 
     content="
     default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com https://code.jquery.com https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com http://bimafunds.klubaners.web.id; 
-    style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com; 
+    style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com https://cdnjs.cloudflare.com;
     media-src *" />
+
+    <!-- font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -46,7 +49,25 @@
                 <h3>MONITORING KEUANGAN<br>SMK BINA MANDIRI PURWAREJA KLAMPOK</h3>
             </div>
         </div>
-        
+        <div class="row badan">
+            <div class="col">
+                <div class='blok-judul'>
+                    <a href="indexwk.html">
+                        <i class="fa fa-home"></i>
+                    </a>
+                    <h2 onclick=location.reload()>Riwayat Pembayaran</h2>
+                </div>
+                <div class="form-group">
+                    <label for="dataSiswa">Pilih Siswa</label>
+                    <select id="dataSiswa" class="form-control"></select>
+                </div>
+                <hr>
+                <div class="list-group" id="riwayatBayar"></div>
+                <br>
+                <div class="list-group" id="riwayatRsume"></div>
+            </div>
+            
+        </div>
         <div class="row kaki">
             <div class="col">
                 @copy;2019 SMK Bina Mandiri Purwareja Klampok
@@ -62,7 +83,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/config.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/payhistory.js"></script>
 </body>
 
 </html>
