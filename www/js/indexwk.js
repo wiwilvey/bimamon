@@ -35,12 +35,12 @@ $(document).ready(function(){
     }) 
     for (let tl = 7 ; tl <=12 ; tl ++){
         let bulan = pad(tl,2);
-        $("#fltBulan").append(`<option>${tahunLalu}-${bulan}</option>`)
+        $("#fltBulan").append(`<option value='${tahunLalu}-${bulan}'>${bulan}-${tahunLalu}</option>`)
     }
 
     for ( let ti = 1 ; ti <=12 ; ti++ ){
         let bulan = pad(ti,2);
-        $("#fltBulan").append(`<option>${tahunIni}-${bulan}</option>`)
+        $("#fltBulan").append(`<option value='${tahunIni}-${bulan}'>${bulan}-${tahunIni}</option>`)
     }
 
     $("#fltBulan").change( function(){
