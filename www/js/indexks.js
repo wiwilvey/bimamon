@@ -21,5 +21,39 @@ $(document).ready( function(){
         $("#saldoDU").html( parseInt(rekap.du).toLocaleString('id-ID') );
         $("#saldoKeluar").html( parseInt(rekap.keluar).toLocaleString('id-ID') );
         $("#saldoAkhir").html( parseInt(rekap.sisa).toLocaleString('id-ID') );
+        let data={
+            datasets: [{
+                data: [
+                    parseInt(rekap.spp),
+                    parseInt(rekap.du),
+                    parseInt(rekap.keluar),
+                ],
+                backgroundColor: [
+                    "blue","green","red",
+                ],
+                label: 'Rekap Keuangan'
+            }],
+            labels: [
+                'SPP',
+                'Daftar Ulang',
+                'Pengeluaran'
+            ]
+        }
+
+        setChart(data);
     })
 })
+
+function setChart(data){
+    let ctx = $('#grapRekap');
+    var rekapkeu = new Chart(ctx, {
+        type: 'pie',
+        data: data,
+        options: {
+            responsive: true,
+            animateRotate:true,
+            outerRadius: 500,
+            cutoutPercentage: 0
+        }
+    });
+}

@@ -57,3 +57,7 @@ div.row.kepala > div > h3{
 
 .dabay:nth-child(odd){ background-color: #f0f0f0;}
 .dabay > p { margin: 0; padding: 0;}
+
+.chartArea {
+    width: 100%; max-width:600px; height:300px; border: 0px solid black;
+}

@@ -16,7 +16,10 @@ $(document).ready(function(){
        // alert($(this).val());
         let kb = $(this).val();
          $.getJSON( server + `rekapBulanan.php?pos=keluar&kb=${kb}` , function(dana){
-             $("#cashout tr").remove();
+            let outlabel=$("#kodepos option:selected").text();
+            let rdatas = [];
+            let glabel = []; 
+            $("#cashout tr").remove();
              $.each(dana , function(i,data){
                  $("#cashout").append(`
                      <tr>
@@ -26,7 +29,22 @@ $(document).ready(function(){
                      <td align='right'>${parseInt(data.JUMLAH).toLocaleString('id-ID')}</td>
                      </tr>
                  `);
+                 glabel.push(data.BULAN);
+                 rdatas.push(parseInt(data.JUMLAH));
              })
+
+            let data= {
+                labels: glabel,
+                datasets: [{
+                    label: outlabel,
+                    fill: false,
+                    backgroundColor: "yellow",
+                    borderColor: "orange",
+                    data: rdatas,
+                    }]
+                }
+    
+            setChart(data);
          })
     })
 
@@ -49,3 +67,13 @@ $(document).ready(function(){
     })
 })
 
+function setChart(data){
+    let ctx = $('#outRekap');
+    var rekapkeu = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: {
+            responsive: true,
+        }
+    });
+}

@@ -30,12 +30,15 @@
     <meta http-equiv="Content-Security-Policy" 
     content="
     default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com https://code.jquery.com https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com http://bimafunds.klubaners.web.id; 
-    style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com; 
+    style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com https://cdnjs.cloudflare.com; 
     media-src *" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <!-- chart js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css">
     <title>BINA MANDIRI FUND MANAGEMENT</title>
 </head>
 
@@ -65,6 +68,7 @@
                 <div class="blok-judul">
                     <h2>Rekapitulasi Keuangan</h2>
                 </div>
+                <canvas id="grapRekap" class="chartArea"></canvas>
                 <div class="list-group">
                     <li class="list-group-item">
                         <div class="item-keuangan">Pemasukan SPP</div>

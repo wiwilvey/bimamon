@@ -37,6 +37,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- font-awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- chart js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css">
+    <title>BINA MANDIRI FUND MANAGEMENT</title>
+
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <style>
         #rekordSPP > li > p { font-size: 14px; margin: 0; padding: 0;}
@@ -63,6 +69,7 @@
                 
                 <div class="table-responsive">
                     <h4>Rekap Perbulan Global</h4>
+                    <canvas id="sppGRekap" class="chartArea"></canvas>
                     <table class="table table-sm table-striped">
                         <thead>
                             <tr>
