@@ -12,7 +12,7 @@ $(document).ready(function(){
             success : function(kls){
                 console.log('kelamu:',kls);
                 localStorage.setItem('kelas',kls);
-                nig = localStorage.getItem('nig');
+                //nig = localStorage.getItem('nig');
                 location.reload();
             }
         })
